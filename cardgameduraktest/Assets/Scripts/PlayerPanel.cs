@@ -7,16 +7,22 @@ using UnityEngine.UI;
 
 public class PlayerPanel : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPointerExitHandler
 {
+
+    Image cachImage = null;
     void Update()
     {
 
         if (Input.GetMouseButtonDown(0))
-            GetComponent<Image>().raycastTarget = true;
+            cachImage.raycastTarget = true;
         if (Input.GetMouseButtonUp(0))
         {
-            GetComponent<Image>().raycastTarget = false;
+           cachImage.raycastTarget = false;
         }
      
+    }
+
+    void Awake() {
+        cachImage = GetComponent<Image>();
     }
 
 public void OnDrop(PointerEventData eventData)

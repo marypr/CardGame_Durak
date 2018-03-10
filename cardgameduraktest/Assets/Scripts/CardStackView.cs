@@ -12,13 +12,22 @@ public class CardStackView : MonoBehaviour {
     CardStack deck;
     Dictionary<int, GameObject> fetchedCards;
     int lastCount;
-    public Vector3 start;
+   public Vector3 start;
     public float cardOffset;
     public GameObject cardPrefab;
     public bool faceUp = false;
     public bool reverseLayerOrder = false;
-  
+    StartGameDebug mystart = null;
+    Transform enemytrans, playertrans = null;
 
+
+
+    void Awake() {
+        mystart = GameObject.Find("StartGame").GetComponent<StartGameDebug>();
+        enemytrans = GameObject.Find("EnemyPanel").transform;
+        playertrans = GameObject.Find("PlayerPanel").transform;
+
+    }
     void Start()
     {
 
@@ -55,8 +64,9 @@ public class CardStackView : MonoBehaviour {
        {
             foreach (int i in deck.GetCards())
             {
-                float co = cardOffset * cardCount; 
-                Vector3 temp = start + new Vector3(co, 0f);
+             //   float co = cardOffset * cardCount;
+                //  Vector3 temp = start + new Vector3(co, 0f);
+                Vector3 temp = start;
                 AddCard(temp, i, cardCount);
                 cardCount++;
             }
@@ -70,7 +80,7 @@ public class CardStackView : MonoBehaviour {
         }
 
         GameObject cardCopy = (GameObject)Instantiate(cardPrefab);
-        cardCopy.name = ("Card" + GameObject.Find("StartGame").GetComponent<StartGameDebug>().numerc++);
+        cardCopy.name = ("Card" + mystart.numerc++);
      
        cardCopy.transform.position = position;
 
@@ -78,17 +88,17 @@ public class CardStackView : MonoBehaviour {
         cardModel.cardIndex = cardIndex;
         cardModel.ToggleFace(faceUp);
 
-        if (GameObject.Find("StartGame").GetComponent<StartGameDebug>().parentenemy)
+        if (mystart.parentenemy)
         {
-            cardModel.transform.SetParent(GameObject.Find("EnemyPanel").transform);
+            cardModel.transform.SetParent(enemytrans.transform);
             
         }
 
-        if (GameObject.Find("StartGame").GetComponent<StartGameDebug>().parentplayer)
+        if (mystart.parentplayer)
         {
-            cardModel.transform.SetParent(GameObject.Find("PlayerPanel").transform);
+            cardModel.transform.SetParent(playertrans.transform);
         }
-        if (GameObject.Find("StartGame").GetComponent<StartGameDebug>().parentplayer != true && GameObject.Find("StartGame").GetComponent<StartGameDebug>().parentenemy != true)
+        if (mystart.parentplayer != true && mystart.parentenemy != true)
         {
             cardModel.transform.SetParent(this.transform.parent);
         }

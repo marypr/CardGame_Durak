@@ -29,3 +29,34 @@ D:\unity projects\New Unity Project 1\Temp\bin\Debug\UnityEngine.VR.xml
 D:\unity projects\New Unity Project 1\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
 D:\unity projects\New Unity Project 1\obj\Debug\Assembly-CSharp.dll
 D:\unity projects\New Unity Project 1\obj\Debug\Assembly-CSharp.pdb
+D:\GitFolder\CardGameDurak\GardGameDurak\CardGame_Durak\cardgameduraktest\Temp\bin\Debug\Assembly-CSharp.dll
+D:\GitFolder\CardGameDurak\GardGameDurak\CardGame_Durak\cardgameduraktest\Temp\bin\Debug\Assembly-CSharp.pdb
+D:\GitFolder\CardGameDurak\GardGameDurak\CardGame_Durak\cardgameduraktest\Temp\bin\Debug\nunit.framework.dll
+D:\GitFolder\CardGameDurak\GardGameDurak\CardGame_Durak\cardgameduraktest\Temp\bin\Debug\UnityEditor.dll
+D:\GitFolder\CardGameDurak\GardGameDurak\CardGame_Durak\cardgameduraktest\Temp\bin\Debug\UnityEngine.Analytics.dll
+D:\GitFolder\CardGameDurak\GardGameDurak\CardGame_Durak\cardgameduraktest\Temp\bin\Debug\UnityEngine.dll
+D:\GitFolder\CardGameDurak\GardGameDurak\CardGame_Durak\cardgameduraktest\Temp\bin\Debug\UnityEngine.HoloLens.dll
+D:\GitFolder\CardGameDurak\GardGameDurak\CardGame_Durak\cardgameduraktest\Temp\bin\Debug\UnityEngine.Networking.dll
+D:\GitFolder\CardGameDurak\GardGameDurak\CardGame_Durak\cardgameduraktest\Temp\bin\Debug\UnityEngine.TestRunner.dll
+D:\GitFolder\CardGameDurak\GardGameDurak\CardGame_Durak\cardgameduraktest\Temp\bin\Debug\UnityEngine.UI.dll
+D:\GitFolder\CardGameDurak\GardGameDurak\CardGame_Durak\cardgameduraktest\Temp\bin\Debug\UnityEngine.VR.dll
+D:\GitFolder\CardGameDurak\GardGameDurak\CardGame_Durak\cardgameduraktest\Temp\bin\Debug\Mono.Cecil.dll
+D:\GitFolder\CardGameDurak\GardGameDurak\CardGame_Durak\cardgameduraktest\Temp\bin\Debug\Unity.SerializationLogic.dll
+D:\GitFolder\CardGameDurak\GardGameDurak\CardGame_Durak\cardgameduraktest\Temp\bin\Debug\Unity.DataContract.dll
+D:\GitFolder\CardGameDurak\GardGameDurak\CardGame_Durak\cardgameduraktest\Temp\bin\Debug\ICSharpCode.NRefactory.dll
+D:\GitFolder\CardGameDurak\GardGameDurak\CardGame_Durak\cardgameduraktest\Temp\bin\Debug\Unity.UNetWeaver.dll
+D:\GitFolder\CardGameDurak\GardGameDurak\CardGame_Durak\cardgameduraktest\Temp\bin\Debug\Unity.CecilTools.dll
+D:\GitFolder\CardGameDurak\GardGameDurak\CardGame_Durak\cardgameduraktest\Temp\bin\Debug\Mono.Cecil.Pdb.dll
+D:\GitFolder\CardGameDurak\GardGameDurak\CardGame_Durak\cardgameduraktest\Temp\bin\Debug\Mono.Cecil.Mdb.dll
+D:\GitFolder\CardGameDurak\GardGameDurak\CardGame_Durak\cardgameduraktest\Temp\bin\Debug\UnityEngine.xml
+D:\GitFolder\CardGameDurak\GardGameDurak\CardGame_Durak\cardgameduraktest\Temp\bin\Debug\UnityEditor.xml
+D:\GitFolder\CardGameDurak\GardGameDurak\CardGame_Durak\cardgameduraktest\Temp\bin\Debug\UnityEngine.UI.xml
+D:\GitFolder\CardGameDurak\GardGameDurak\CardGame_Durak\cardgameduraktest\Temp\bin\Debug\UnityEngine.Networking.xml
+D:\GitFolder\CardGameDurak\GardGameDurak\CardGame_Durak\cardgameduraktest\Temp\bin\Debug\UnityEngine.TestRunner.xml
+D:\GitFolder\CardGameDurak\GardGameDurak\CardGame_Durak\cardgameduraktest\Temp\bin\Debug\nunit.framework.xml
+D:\GitFolder\CardGameDurak\GardGameDurak\CardGame_Durak\cardgameduraktest\Temp\bin\Debug\UnityEngine.Analytics.xml
+D:\GitFolder\CardGameDurak\GardGameDurak\CardGame_Durak\cardgameduraktest\Temp\bin\Debug\UnityEngine.HoloLens.xml
+D:\GitFolder\CardGameDurak\GardGameDurak\CardGame_Durak\cardgameduraktest\Temp\bin\Debug\UnityEngine.VR.xml
+D:\GitFolder\CardGameDurak\GardGameDurak\CardGame_Durak\cardgameduraktest\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
+D:\GitFolder\CardGameDurak\GardGameDurak\CardGame_Durak\cardgameduraktest\obj\Debug\Assembly-CSharp.dll
+D:\GitFolder\CardGameDurak\GardGameDurak\CardGame_Durak\cardgameduraktest\obj\Debug\Assembly-CSharp.pdb

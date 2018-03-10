@@ -7,6 +7,8 @@ public class StartGameDebug : MonoBehaviour
     public CardStack dealer;
     public CardStack player;
     public CardStack enemy;
+    public CardStack onTable;
+    public CardStack OnUsedCardsPanel;
     public bool playersmove;
     public bool newmove;
     public int xcoord;
@@ -18,13 +20,16 @@ public class StartGameDebug : MonoBehaviour
     public int numerc;
 
 
+    public static StartGameDebug instance = null;
+
+
     void Start()
     {
         numerc = 0;
         newmove = true;
         playersmove = false;
-        xcoord = 200;
-        ycoord = 300;
+        xcoord = 180;
+        ycoord = 290;
         zcoord = 0;
         sorter = 2;
         parentenemy = true;
@@ -34,7 +39,6 @@ public class StartGameDebug : MonoBehaviour
             enemy.Push(dealer.Pop());
         }
         StartCoroutine(Wait());
-
     }
 
 

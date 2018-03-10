@@ -4,68 +4,93 @@ using UnityEngine;
 
 public class Trigger : MonoBehaviour
 {
-
+ 
     public Vector3 trans;
-
+    StartGameDebug mystart = null;
+    UsedCardsPanelScript usedpanel = null;
+    SpriteRenderer mySpriteRen = null;
 
     void Start()
     {
-        GameObject.Find("Table").GetComponent<UsedCardsPanelScript>().yourmove = true;
+        usedpanel.yourmove = true;
 
+    }
+
+    void Awake() {
+       mystart = GameObject.Find("StartGame").GetComponent<StartGameDebug>();
+       usedpanel = GameObject.Find("Table").GetComponent<UsedCardsPanelScript>();
+        mySpriteRen = GameObject.FindGameObjectWithTag("ImageSuit").GetComponent<SpriteRenderer>();
     }
     void OnTriggerEnter2D(Collider2D other)
     {
 
         if (other.gameObject.tag == "Trigg")
         {
-          
-            GameObject.FindGameObjectWithTag("ImageSuit").GetComponent<SpriteRenderer>().enabled = false;
 
-            if (GameObject.Find("StartGame").GetComponent<StartGameDebug>().newmove)
+            mySpriteRen.enabled = false;
+
+            if (mystart.newmove)
             {
 
-                GameObject.Find("StartGame").GetComponent<StartGameDebug>().xcoord = 200;
-                GameObject.Find("StartGame").GetComponent<StartGameDebug>().ycoord = 260;
-                GameObject.Find("StartGame").GetComponent<StartGameDebug>().zcoord = 0;
-                GameObject.Find("StartGame").GetComponent<StartGameDebug>().sorter = 2 ;
-                trans = new Vector3(GameObject.Find("StartGame").GetComponent<StartGameDebug>().xcoord, 260, 0);
-                GameObject.Find("StartGame").GetComponent<StartGameDebug>().playersmove = true;
-                GameObject.Find("StartGame").GetComponent<StartGameDebug>().newmove = false;
+                startGame.xcoord = 180;
+                mystart.ycoord = 290;
+                mystart.zcoord = 2;
+                mystart.sorter = 2 ;
+                trans = new Vector3(mystart.xcoord, 290, 2);
+                mystart.playersmove = true;
+                mystart.newmove = false;
 
-                if (GameObject.Find("Table").GetComponent<UsedCardsPanelScript>().yourmove)
-                    GameObject.Find("Table").GetComponent<UsedCardsPanelScript>().yourmove = false;
+                if (usedpanel.yourmove)
+                    usedpanel.yourmove = false;
                 else
-                    GameObject.Find("Table").GetComponent<UsedCardsPanelScript>().yourmove = true;
+                    usedpanel.yourmove = true;
 
             }
 
             else
             {
-                if (GameObject.Find("StartGame").GetComponent<StartGameDebug>().playersmove)
+                if (mystart.playersmove)
                 {
-                    if (GameObject.Find("Table").GetComponent<UsedCardsPanelScript>().yourmove)
-                        GameObject.Find("Table").GetComponent<UsedCardsPanelScript>().yourmove = false;
+                    if (usedpanel.yourmove)
+                        usedpanel.yourmove = false;
                     else
-                        GameObject.Find("Table").GetComponent<UsedCardsPanelScript>().yourmove = true;
-                    GameObject.Find("StartGame").GetComponent<StartGameDebug>().xcoord = GameObject.Find("StartGame").GetComponent<StartGameDebug>().xcoord + 25;
-                    GameObject.Find("StartGame").GetComponent<StartGameDebug>().sorter = GameObject.Find("StartGame").GetComponent<StartGameDebug>().sorter + 1;
-                    trans = new Vector3(GameObject.Find("StartGame").GetComponent<StartGameDebug>().xcoord, 260, GameObject.Find("StartGame").GetComponent<StartGameDebug>().zcoord);
-                    GameObject.Find("StartGame").GetComponent<StartGameDebug>().playersmove = false;
+                        usedpanel.yourmove = true;
+                    mystart.xcoord = mystart.xcoord + 25;
+                    mystart.sorter = mystart.sorter + 1;
+                
+                    trans =new Vector3(mystart.xcoord, 290, mystart.zcoord);
+                    mystart.playersmove = false;
                 }
 
                 else
                 {
-                    if (GameObject.Find("Table").GetComponent<UsedCardsPanelScript>().yourmove)
-                        GameObject.Find("Table").GetComponent<UsedCardsPanelScript>().yourmove = false;
+                    if (usedpanel.yourmove)
+                        usedpanel.yourmove = false;
                     else
-                        GameObject.Find("Table").GetComponent<UsedCardsPanelScript>().yourmove = true;
-                    GameObject.Find("StartGame").GetComponent<StartGameDebug>().sorter = GameObject.Find("StartGame").GetComponent<StartGameDebug>().sorter + 1;
-                    GameObject.Find("StartGame").GetComponent<StartGameDebug>().xcoord = GameObject.Find("StartGame").GetComponent<StartGameDebug>().xcoord + 75;
-                    trans = new Vector3(GameObject.Find("StartGame").GetComponent<StartGameDebug>().xcoord, 260, GameObject.Find("StartGame").GetComponent<StartGameDebug>().zcoord);
-                    GameObject.Find("StartGame").GetComponent<StartGameDebug>().playersmove = true;
+                        usedpanel.yourmove = true;
+                    mystart.sorter = mystart.sorter + 1;
+                    mystart.xcoord = mystart.xcoord + 75;
+                   
+                    trans = new Vector3(mystart.xcoord, 290, mystart.zcoord);
+                    mystart.playersmove = true;
                 }
             }
         }
     
     }
+
+
+    #region
+    public StartGameDebug startGame
+    {
+        get
+        {
+            if ((object)mystart == null)
+            {
+                mystart = GetComponent<StartGameDebug>();
+            }
+            return mystart;
+        }
+    }
+    #endregion
 }

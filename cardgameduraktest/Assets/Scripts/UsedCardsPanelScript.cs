@@ -2,13 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+using UnityEngine.UI;
+
 public class UsedCardsPanelScript : MonoBehaviour {
 
 
        
-        public Transform[] usedcards;
-
-          public bool yourmove;
+    public Transform[] usedcards;
+    public Text MyTestLabel;
+    public bool yourmove;
+    StartGameDebug mystart = null;
+    public bool clicked;
+   
 
 
     void Update()
@@ -21,40 +26,34 @@ public class UsedCardsPanelScript : MonoBehaviour {
                 usedcards[i++] = t;
             
         }
-        }
-
- 
-
-    void OnGUI() {
-
-        if (yourmove) {
-
-             GUI.Label(new Rect(700, 10, 100, 40), "Ход с нижнего стола");
-        }
-        else {
-
-            GUI.Label(new Rect(700, 10, 100, 40), "Ход c верхнего стола");
-        }
-
-        if (GUI.Button(new Rect(346, 5, 256, 28), "Отбой!"))
+        if (yourmove)
         {
-            GameObject.Find("StartGame").GetComponent<StartGameDebug>().newmove = true;
-            GameObject.Find("StartGame").GetComponent<StartGameDebug>().playersmove = false;
-            
-          
-            for (int i = 1; i < usedcards.Length; i++) {
 
-                usedcards[i].SetParent(GameObject.Find("UsedCardsPanel").transform);
-            }
-            if (yourmove)
-                yourmove = false;
-            else
-                yourmove = true;
-           
+            MyTestLabel.text =  "Ход с нижнего стола";
         }
+        else
+        {
 
+            MyTestLabel.text = "Ход c верхнего стола";
+        }
+       
     }
 
+    void Awake() {
+        mystart = GameObject.Find("StartGame").GetComponent<StartGameDebug>();
+       
+    }
+
+  public void ClickBeat() {
+        clicked = true;
+        mystart.newmove = true;
+        mystart.playersmove = false;
+
+        if (yourmove)
+            yourmove = false;
+        else
+            yourmove = true;
+    }
    
-}
+    }
 
